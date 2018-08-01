@@ -7,8 +7,8 @@
 #define MyAppExeName "Allods.exe"
 #define MyAppLoggingName "Tuners"
 #define MyAppLoggedName "Tuners"
-#define DebugSourcePath "..\一键打开\一键打开\bin\Debug"
-#define ReleaseSourcePath "..\一键打开\一键打开\bin\Debug"
+#define DebugSourcePath "..\..\一键打开\Allods\一键打开\bin\Debug"
+#define ReleaseSourcePath "..\..\一键打开\Allods\一键打开\bin\Debug"
 
 [Setup]
 ; NOTE: The value of AppId uniquely identifies this application.
@@ -22,7 +22,7 @@ AppPublisher={#MyAppPublisher}
 DefaultDirName={pf}\{#MyAppNameEn}
 DefaultGroupName=广西县级应急广播系统
 DisableProgramGroupPage=yes
-OutputDir=..\setup
+OutputDir=..\..\setup
 OutputBaseFilename="{#MyAppName}{#MyAppVersion}"
 Compression=lzma
 SolidCompression=yes
@@ -39,7 +39,7 @@ Name: "quicklaunchicon"; Description: "{cm:CreateQuickLaunchIcon}"; GroupDescrip
 
 [Files]
 Source: "{#ReleaseSourcePath}\Allods.exe"; DestDir: "{app}"; Flags: ignoreversion
-Source: "{#ReleaseSourcePath}\*"; DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirsSource: "..\打包环境\Framework\*"; DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs
+Source: "{#ReleaseSourcePath}\*"; DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirsSource: "..\..\打包环境\Framework\*"; DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs
 [Icons]
 Name: "{commonprograms}\{#MyAppName}"; Filename: "{app}\{#MyAppExeName}"
 Name: "{commondesktop}\{#MyAppName}"; Filename: "{app}\{#MyAppExeName}"; Tasks: desktopicon
