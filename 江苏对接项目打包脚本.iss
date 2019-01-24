@@ -106,7 +106,7 @@ UnInstallFile : String;
 begin
     ResultCode:=-1;
     UnInstallFile:=''
-    RegQueryStringValue(HKLM, 'SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion\Uninstall\{A6A7578-84EC-4006-8226-C87D71FB94}_is1', 'UninstallString', UnInstallFile);
+    RegQueryStringValue(HKLM, 'SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion\Uninstall\{10A81DBC-3CC1-487A-BA98-1343F6A0251E}_is1', 'UninstallString', UnInstallFile);
     StringChangeEx(UnInstallFile, '"', '', True);
     if(FileExists(UnInstallFile)) then begin
         Exec(UnInstallFile, '/norestart', ExtractFilePath(UnInstallFile), SW_SHOWNORMAL, ewWaitUntilTerminated, ResultCode);
